@@ -120,13 +120,13 @@ module.exports = function (RED) {
       }
       switch (operation) {
         case 'SET':
-          tuyaDevice.set(msg.payload);
+          tuyaDevice.set(msg.payload.payload);
           break;
         case 'REFRESH':
-          tuyaDevice.refresh(msg.payload);
+          tuyaDevice.refresh(msg.payload.payload);
           break;
         case 'GET':
-          tuyaDevice.get(msg.payload);
+          tuyaDevice.get(msg.payload.payload);
           break;
         case 'CONTROL':
           if (msg.payload.action == 'CONNECT') {
